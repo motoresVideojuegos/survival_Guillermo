@@ -22,8 +22,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     private Rigidbody _rbody;
 
+    public float _jumpForce;
+
     private void Awake() {
         _rbody = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
     // Start is called before the first frame update
     void Start()
@@ -54,9 +57,13 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Movement(){
-        Vector3 direction = new Vector3(  _moveInput.x * _speed , _rbody.velocity.y, _moveInput.y * _speed ); 
+        
+        Vector3 direction = transform.right * _moveInput.x * _speed + transform.forward * _moveInput.y * _speed;
+
+        direction.y = _rbody.velocity.y;
 
         _rbody.velocity = direction ;
+
     }
 
     public void OnViewInput(InputAction.CallbackContext context){
@@ -66,6 +73,29 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         _moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnJump(InputAction.CallbackContext context){
+
+        if(context.phase == InputActionPhase.Started){
+            Ray hit = new Ray(transform.position, Vector3.down);
+
+            if(Physics.Raycast(hit, 1.1f)){
+                _rbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+            }
+            
+        }
+    }
+
+    public void OnRun(InputAction.CallbackContext context){
+
+        if(context.phase == InputActionPhase.Performed){
+            _speed = _speed * 2;
+        }
+
+        if(context.phase == InputActionPhase.Canceled){
+            _speed = _speed / 2;
+        }
     }
 
 }
