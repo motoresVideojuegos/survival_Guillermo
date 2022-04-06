@@ -7438,6 +7438,7 @@ GameObject:
   - component: {fileID: 1950847836}
   - component: {fileID: 1950847837}
   - component: {fileID: 1950847838}
+  - component: {fileID: 1950847839}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7652,6 +7653,51 @@ MonoBehaviour:
   mouse_sensitivity: 0.15
   _speed: 5
   _jumpForce: 100
+--- !u!114 &1950847839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950847831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de63207df5a095479923d0fa6784bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life:
+    currentValue: 0
+    initialValue: 100
+    maxValue: 100
+    index_recuperation: 0
+    index_deterioration: 0
+    UIimage: {fileID: 305095668}
+  hunger:
+    currentValue: 0
+    initialValue: 300
+    maxValue: 500
+    index_recuperation: 0
+    index_deterioration: 0
+    UIimage: {fileID: 1536213187}
+  dehydration:
+    currentValue: 0
+    initialValue: 300
+    maxValue: 500
+    index_recuperation: 0
+    index_deterioration: 0
+    UIimage: {fileID: 1193325352}
+  relaxation:
+    currentValue: 0
+    initialValue: 100
+    maxValue: 500
+    index_recuperation: 0
+    index_deterioration: 0
+    UIimage: {fileID: 1718574517}
+  deterioration_hunger_life: 1
+  deterioration_dehydration_life: 1
+  onGetDeterioration:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1958137738
 PrefabInstance:
   m_ObjectHideFlags: 0
