@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using static Interfaces;
+using static Classes;
 
 public class IndicatorScript : MonoBehaviour, IDeterioration
 {

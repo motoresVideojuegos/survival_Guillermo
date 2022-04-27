@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6755d8a2b81a81d4eb67dae6cc960689, type: 3}
   m_Name: Bed
   m_EditorClassIdentifier: 
-  name: Cam
+  name: Cama
   description: "Restaura el sue\xF1o"
   icon: {fileID: -3265952071504602075, guid: f1f5ea8ec85889040b3fd985853e4810, type: 3}
   prefabObject: {fileID: 1836472143408630, guid: b21e89a06afcfe34e9558e74d73557b2, type: 3}
