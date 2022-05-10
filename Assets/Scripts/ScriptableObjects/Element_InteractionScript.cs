@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class Element_InteractionScript : MonoBehaviour
 {
@@ -19,14 +20,19 @@ public class Element_InteractionScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other, ) {
         if(other.gameObject.GetComponent<ElementScript>()){
             TMPtext.text = other.gameObject.GetComponent<ElementScript>().GetMessageInteractable();
             TMPtext.gameObject.SetActive(true);
+
         }
     }
 
     private void OnTriggerExit(Collider other) {
         TMPtext.gameObject.SetActive(false);
+    }
+
+    public void OnAction(InputAction.CallbackContext context){
+        
     }
 }

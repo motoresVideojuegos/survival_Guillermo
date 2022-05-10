@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using UnityEngine.Events;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float minXview;
     public float maxXview;
     public float mouse_sensitivity;
+    public bool canLook;
 
     float cameraRotationY;
     float cameraRotationX;
@@ -26,9 +26,12 @@ public class PlayerController : MonoBehaviour
 
     public float _jumpForce;
 
+
+
     private void Awake() {
         _rbody = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        canLook = true;
     }
     // Start is called before the first frame update
     void Start()
@@ -43,7 +46,10 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate()
     {
-        CameraView();
+        if(canLook){
+            CameraView();
+        }
+        
     }
 
     public void CameraView(){
@@ -98,6 +104,11 @@ public class PlayerController : MonoBehaviour
         if(context.phase == InputActionPhase.Canceled){
             _speed = _speed / 2;
         }
+    }
+
+    public void ActivateDeactivate_mousePointer(bool value){
+        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+        canLook = !value;
     }
 
 }

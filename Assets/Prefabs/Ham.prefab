@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3884648760947732525}
   - component: {fileID: 3858668820795295121}
   - component: {fileID: 3866940992196650597}
-  - component: {fileID: 3777407847883910967}
   - component: {fileID: 3889180680084932423}
   m_Layer: 0
   m_Name: Ham
@@ -87,18 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3777407847883910967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3889648754425262505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3abfc7198c85ce649bd21dd41e50b870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3889180680084932423
 MonoBehaviour:
   m_ObjectHideFlags: 0
