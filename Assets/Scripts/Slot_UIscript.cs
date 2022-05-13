@@ -34,7 +34,7 @@ public class Slot_UIscript : MonoBehaviour
 
     public void OnButtonClick()
     {
-        //todav�a nada
+        Slot_PlayerScript.inst.SelectedElement(index);
     }
 
 }

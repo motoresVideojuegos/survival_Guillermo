@@ -101,9 +101,9 @@ public class IndicatorScript : MonoBehaviour, IDeterioration
         dehydration.Add(num);
     }
 
-    public void Sleep(float num)
+    public void Sleep()
     {
-        relaxation.Add(num);
+        relaxation.Add(relaxation.maxValue);
     }
 
     public void Death()

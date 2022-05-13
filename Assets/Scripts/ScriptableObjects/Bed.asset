@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cama
   description: "Restaura el sue\xF1o"
+  elementType: 2
+  amount: 100
   icon: {fileID: -3265952071504602075, guid: f1f5ea8ec85889040b3fd985853e4810, type: 3}
-  prefabObject: {fileID: 1836472143408630, guid: b21e89a06afcfe34e9558e74d73557b2, type: 3}
+  prefabObject: {fileID: 8771020157301578694, guid: 68a76143a0176e147a287ad600d6687f, type: 3}

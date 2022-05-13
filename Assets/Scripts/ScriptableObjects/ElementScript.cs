@@ -10,11 +10,21 @@ public class ElementScript : MonoBehaviour, IInteractable
 
     public string GetMessageInteractable()
     {
-        return string.Format("[E] Obtener {0}", element.name);
+        if(element.elementType == Type.Sleep){
+            return string.Format("[E] Usar {0}", element.name);
+        }else{
+            return string.Format("[E] Obtener {0}", element.name);
+        }
+        
     }
 
     public void OnInteract()
     {
-        Destroy(gameObject);
+        if(element.elementType == Type.Sleep){
+            Slot_PlayerScript.inst.AddSleep();
+        }else{
+            Destroy(gameObject);
+        }
+       
     }
 }

@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6063237}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1950847840}
+        m_TargetAssemblyTypeName: Slot_PlayerScript, Assembly-CSharp
+        m_MethodName: OnDropButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6063237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,7 +3018,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 464475879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1950847840}
+        m_TargetAssemblyTypeName: Slot_PlayerScript, Assembly-CSharp
+        m_MethodName: OnUseButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464475879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4765,6 +4789,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
   m_PrefabInstance: {fileID: 745635005}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &754778605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 754778606}
+  m_Layer: 0
+  m_Name: dropPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &754778606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754778605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1136385243}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &757490370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6854,6 +6908,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2013804987}
+  - {fileID: 754778606}
   m_Father: {fileID: 1950847835}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10916,6 +10971,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a4194b0b-3899-4adf-88b2-d24e1787035c
     m_ActionName: MainPlayerController/Inventory[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2013804990}
+        m_TargetAssemblyTypeName: Element_InteractionScript, Assembly-CSharp
+        m_MethodName: OnAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1220f10a-289b-406d-a30c-31973a0b0f06
+    m_ActionName: MainPlayerController/PickUp[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MainPlayerController
@@ -11031,7 +11102,7 @@ MonoBehaviour:
   - {fileID: 1509254211}
   - {fileID: 684095749}
   inventoryWindow: {fileID: 788635023}
-  positionDrop: {fileID: 0}
+  positionDrop: {fileID: 754778606}
   text_selectedItem: {fileID: 718017948}
   description_selectedItem: {fileID: 196963489}
   inventoryFull_text: {fileID: 0}
@@ -11740,6 +11811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TMPtext: {fileID: 767435243}
+  interactGO: {fileID: 0}
+  slot_player: {fileID: 1950847840}
 --- !u!1001 &2021558158
 PrefabInstance:
   m_ObjectHideFlags: 0

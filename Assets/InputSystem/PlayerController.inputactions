@@ -46,7 +46,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "PickUp",
+                    "name": "OnAction",
                     "type": "Button",
                     "id": "1220f10a-289b-406d-a30c-31973a0b0f06",
                     "expectedControlType": "Button",
@@ -161,7 +161,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PickUp",
+                    "action": "OnAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

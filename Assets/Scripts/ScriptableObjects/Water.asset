@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Agua
   description: "Restaura la deshidrataci\xF3n"
+  elementType: 0
+  amount: 100
   icon: {fileID: 21300000, guid: 3d72b170f3d667e449d4f93fbd78149d, type: 3}
-  prefabObject: {fileID: 1112174935158326, guid: 4d53eec46a23f5e49bce705206cfccb8, type: 3}
+  prefabObject: {fileID: 9157345692325524928, guid: 50b6ac4f971112c4786d2da7c4fe0016, type: 3}

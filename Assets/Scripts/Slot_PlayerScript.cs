@@ -127,7 +127,7 @@ public class Slot_PlayerScript : MonoBehaviour
 
     public void DropElement(Element_Scriptable element)
     {
-        Instantiate(element.prefabObject, positionDrop.position, Quaternion.Euler(Vector3.one * Random.value * 360.0f));
+        Instantiate(element.prefabObject, positionDrop.position, Quaternion.identity);
     }
 
     SlotElement GetEmptySpace()
@@ -202,14 +202,18 @@ public class Slot_PlayerScript : MonoBehaviour
             case Type.Eat:
                 indicatorScript.Eat(slot_selectedItem.element.amount);
                 break;
-            /*case ElementType.Sleep:
-                indicatorScript.Sleep(slot_selectedItem.element.amount);
+            case Type.Sleep:
+                indicatorScript.Sleep();
                 break;
-            case ElementType.Life:
-                indicatorScript.RecoverLife(slot_selectedItem.element.amount);
-                break;*/
+            case Type.Life:
+                indicatorScript.AddLife(slot_selectedItem.element.amount);
+                break;
         }
         RemoveSelectedElement();
+    }
+
+    public void AddSleep(){
+        indicatorScript.Sleep();
     }
 
     public void OnDropButton()
