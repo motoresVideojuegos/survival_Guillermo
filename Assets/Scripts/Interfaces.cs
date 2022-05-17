@@ -11,5 +11,6 @@ public class Interfaces : MonoBehaviour
     public interface IInteractable{
         string GetMessageInteractable();
         void OnInteract();
+        Element_Scriptable GetElement();
     }
 }

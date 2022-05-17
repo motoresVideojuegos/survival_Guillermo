@@ -27,4 +27,8 @@ public class ElementScript : MonoBehaviour, IInteractable
         }
        
     }
+
+    public Element_Scriptable GetElement(){
+        return element;
+    }
 }

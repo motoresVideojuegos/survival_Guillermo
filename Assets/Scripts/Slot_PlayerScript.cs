@@ -33,8 +33,9 @@ public class Slot_PlayerScript : MonoBehaviour
     public static Slot_PlayerScript inst;
     private void Awake()
     {
+        maxAmount = 3;
         //singleton
-        if (Slot_PlayerScript.inst==null)
+        if (Slot_PlayerScript.inst == null)
         {
             inst = this;
             DontDestroyOnLoad(this.gameObject);
@@ -68,7 +69,7 @@ public class Slot_PlayerScript : MonoBehaviour
 
     public bool CheckInventory()
     {
-        return slotElement[slotElement.Length - 1].element != null && 
+        return slotElement[slotElement.Length - 1].element != null &&
             slotElement[slotElement.Length - 1].amount >= maxAmount;
     }
 
@@ -82,8 +83,9 @@ public class Slot_PlayerScript : MonoBehaviour
             {
                 elementToStore.amount++;
                 UpdateUI();
-                return; //------------------------------
+                return; //------------------------------D
             }
+
         }
 
         SlotElement emptyElement = GetEmptySpace();
@@ -212,7 +214,8 @@ public class Slot_PlayerScript : MonoBehaviour
         RemoveSelectedElement();
     }
 
-    public void AddSleep(){
+    public void AddSleep()
+    {
         indicatorScript.Sleep();
     }
 
